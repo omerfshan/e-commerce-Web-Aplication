@@ -39,11 +39,11 @@ def register_request(request):
                 if User.objects.filter(email=email).exists():
                     return render(request,"account/register.html",{"error":"aynı mailden var"})
                 else:
-                    user= User.objects.create_superuser(username=username,email=email,password=password)
+                    user= User.objects.create_user(username=username,email=email,password=password)
                     user.save()
                     return redirect("login")
         else:
-         return render(request,"account/register.html",{"error":"sifreler ayni"})
+         return render(request,"account/register.html",{"error":"sifreler ayni değil"})
 
 
     else:

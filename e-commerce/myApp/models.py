@@ -27,8 +27,8 @@ class Supplier(models.Model):
 class Product(models.Model):
   name=models.CharField(max_length=50)
   price=models.DecimalField(max_digits=8,decimal_places=2)
-  description=models.CharField(max_length=200)
-  image = models.ImageField(upload_to='images', default="")
+  description=models.CharField(max_length=200,blank=True)
+  image = models.ImageField(upload_to='images', blank=True, null=True)
   isActivate=models.BooleanField(default=False)
   category=models.ManyToManyField(Category)
   supplier=models.ForeignKey(Supplier,on_delete=models.CASCADE,null=True)
