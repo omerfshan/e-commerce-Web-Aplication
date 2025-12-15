@@ -1,8 +1,7 @@
 # Django E-commerce Site
 
 ## Overview
-This project is a fully functional e-commerce website built using the Django framework. It includes essential features such as product browsing, user authentication, shopping cart management, order processing
-
+This project is a fully functional e-commerce website built using the Django framework. It includes essential features such as product browsing, user authentication,product CRUD
 ---
 
 ## Features
